@@ -2,18 +2,25 @@
    1. RÉINITIALISATION
    ========================= */
 :root {
-    --background: var(--background);
-    --surface: var(--surface);
-    --text: var(--text);
+    --background: #f5f5f5;
+    --surface: #ffffff;
+    --text: #222222;
     --text-light: #666666;
-    --border: 1px solid var(--border);
-    --accent: #ff4d8d;
+    --border: #dddddd;
+
+    --accent: #c8b6ff;
+
+    --pastel-blue: #bde0fe;
+    --pastel-pink: #ffc8dd;
+    --pastel-yellow: #fff1b6;
 
     --max-width: 1200px;
 
     --spacing-small: 10px;
     --spacing-medium: 20px;
     --spacing-large: 60px;
+
+    --font-main: "Manrope", sans-serif;
 }
 
 * {
@@ -28,33 +35,88 @@
    ========================= */
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f5f5f5;
-    color: #222;
+    position: relative;
+    z-index: 0;
+
+    font-family: "Manrope", sans-serif;
+    background-color: var(--background);
+    color: var(--text);
     line-height: 1.6;
 }
 
+/* =========================
+   TYPOGRAPHIE
+   ========================= */
+
+h1,
+h2,
+h3 {
+    font-weight: 700;
+    letter-spacing: -0.03em;
+}
 
 /* =========================
    3. NAVIGATION
    ========================= */
 
 header {
-    background-color: #ffffff;
-    padding: 20px 5%;
-    border-bottom: 1px solid #ddd;
+    padding: 25px 5%;
+
+    background-color: var(--surface);
+    border-bottom: 1px solid var(--border);
 }
 
 nav {
+    max-width: var(--max-width);
+    margin: 0 auto;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
 nav a {
-    color: #222;
+    color: var(--text);
     text-decoration: none;
-    font-weight: bold;
+}
+
+
+/* LOGO */
+
+.logo {
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+
+/* LIENS */
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    font-size: 0.9rem;
+    font-weight: 500;
+
+    color: var(--text-light);
+
+    transition: color 0.2s ease;
+}
+
+
+/* SURVOL */
+
+.nav-links a:hover {
+    color: var(--text);
+}
+
+
+/* PAGE ACTUELLE */
+
+.nav-links .active {
+    color: var(--text);
 }
 
 
@@ -68,8 +130,9 @@ nav a {
 }
 
 .hero h1 {
-    font-size: 3rem;
-    margin-bottom: 20px;
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    line-height: 1;
+    margin-bottom: 30px;
 }
 
 .hero p {
@@ -119,6 +182,14 @@ nav a {
 
     background-color: var(--surface);
     border: 1px solid var(--border);
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project:hover {
+    transform: translateY(-5px);
+
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
 }
 
 .project-image {
@@ -128,9 +199,15 @@ nav a {
     justify-content: center;
     align-items: center;
 
-    background-color: #e8dff5;
-
     overflow: hidden;
+}
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+    display: block;
 }
 .project-info {
     display: flex;
@@ -158,9 +235,6 @@ nav a {
     color: var(--text-light);
     max-width: 400px;
 }
-.project h3 {
-    margin-bottom: 10px;
-}
 
 
 /* =========================
@@ -178,6 +252,23 @@ footer {
 }
 
 
+body::before {
+    content: "";
+
+    position: fixed;
+    inset: 0;
+
+    pointer-events: none;
+
+    z-index: -1;
+
+    opacity: 0.12;
+
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='1.2' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+
+    background-size: 80px 80px;
+}
+
 /* =========================
    9. RESPONSIVE
    ========================= */
@@ -189,7 +280,76 @@ footer {
     }
 
     .hero h1 {
-        font-size: 2.2rem;
+        font-size: 2.5rem;
     }
 
+    .cv-intro {
+        padding-top: 60px;
+    }
+
+    .cv-intro h1 {
+        font-size: 2.5rem;
+    }
+
+    .cv-container {
+        padding-bottom: 50px;
+    }
+
+    .cv-image {
+        padding: 10px;
+    }
+
+}
+
+/* =========================
+   CV CSS
+   ========================= */
+
+
+.cv-intro {
+    max-width: var(--max-width);
+
+    margin: 0 auto;
+
+    padding: 100px 5% 60px;
+}
+
+.cv-intro h1 {
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    line-height: 1;
+    margin-bottom: 25px;
+}
+
+.cv-intro p {
+    max-width: 600px;
+
+    color: var(--text-light);
+}
+
+
+.cv-container {
+    max-width: var(--max-width);
+
+    margin: 0 auto;
+
+    padding: 0 5% 80px;
+}
+
+
+.cv-image {
+    background-color: var(--surface);
+
+    border: 1px solid var(--border);
+
+    padding: 25px;
+
+    overflow: hidden;
+}
+
+
+.cv-image img {
+    width: 100%;
+    height: auto;
+
+    display: block;
 }
