@@ -2,22 +2,21 @@
 <html lang="fr">
 
 <head>
-
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Projet 1 — Silvino Tony</title>
+    <title>Affiches — Silvino Tony</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
 
     <link rel="stylesheet" href="style.css">
-
 </head>
-
 
 <body>
 
@@ -49,104 +48,133 @@
     <main>
 
         <section class="project-header">
+
             <a href="index.html" class="back-link">
-            ← Retour au portfolio
+                ← Retour au portfolio
             </a>
+
             <p class="project-category">
-                Identité visuelle
+                Affiches
             </p>
 
             <h1>
-                Projet 1
+                Affiches
             </h1>
 
             <p class="project-introduction">
-                Présentation courte du projet, de son contexte
-                et de l'objectif recherché.
+                Une sélection d'affiches réalisées dans le cadre de
+                projets personnels et scolaires, explorant différentes
+                approches graphiques et thématiques.
             </p>
-
-            <div class="project-meta">
-
-                <div>
-                    <span>Type</span>
-                    <strong>Identité visuelle</strong>
-                </div>
-
-                <div>
-                    <span>Année</span>
-                    <strong>2026</strong>
-            </div>
-
-    <div>
-        <span>Contexte</span>
-        <strong>Projet personnel</strong>
-    </div>
-
-</div>
 
         </section>
 
 
         <section class="project-content">
 
-            <div class="project-main-image">
+            <div class="poster-library">
 
-                <img
-                    src="images/projet-1/Projet_1.png"
-                    alt="Projet 1"
-                    >
+                <button class="poster-arrow poster-arrow-left" aria-label="Affiche précédente">
+                    ←
+                </button>
+
+                <div class="poster-carousel">
+
+                    <div class="poster poster-left">
+                        <img
+                            src="images/projet-1/Projet_1_1.png"
+                            alt="Affiche 1"
+                            class="lightbox-image"
+                        >
+                    </div>
+
+                    <div class="poster poster-center">
+                        <img
+                            src="images/projet-1/Projet_1_2.png"
+                            alt="Affiche 2"
+                            class="lightbox-image"
+                        >
+                    </div>
+
+                    <div class="poster poster-right">
+                        <img
+                            src="images/projet-1/Projet_1_3.png"
+                            alt="Affiche 3"
+                            class="lightbox-image"
+                        >
+                    </div>
+
+                    <div class="poster poster-hidden">
+                        <img
+                            src="images/projet-1/Projet_1_4.png"
+                            alt="Affiche 4"
+                            class="lightbox-image"
+                        >
+                    </div>
+                    
+                    <div class="poster poster-hidden">
+                        <img
+                            src="images/projet-1/Projet_1_5.png"
+                            alt="Affiche 5"
+                            class="lightbox-image"
+                        >
+                    </div>
+
+                    <div class="poster poster-hidden">
+                        <img
+                            src="images/projet-1/Projet_1_6.png"
+                            alt="Affiche 6"
+                            class="lightbox-image"
+                        >
+                    </div>
+
+                    <div class="poster poster-hidden">
+                        <img
+                            src="images/projet-1/Projet_1_7.png"
+                            alt="Affiche 7"
+                            class="lightbox-image"
+                        >
+                    </div>
+
+                    <div class="poster poster-hidden">
+                        <img
+                            src="images/projet-1/Projet_1_8.png"
+                            alt="Affiche 8"
+                            class="lightbox-image"
+                        >
+                    </div>
+
+                    <div class="poster poster-hidden">
+                        <img
+                            src="images/projet-1/Projet_1_9.png"
+                            alt="Affiche 9"
+                            class="lightbox-image"
+                        >
+                    </div>
+
+                </div>
+
+                <button class="poster-arrow poster-arrow-right" aria-label="Affiche suivante">
+                    →
+                </button>
 
             </div>
 
-            <div class="project-gallery">
 
-                <img
-                    src="images/projet-1/Projet_1.png"
-                    alt="Projet 1"
-                    >
+            <div class="poster-info">
 
-                <img
-                    src="images/projet-1/Projet_1.png"
-                    alt="Projet 1"
-                    >
+                <p class="project-category" id="poster-category">
+                    Affiche
+                </p>
 
-            </div>
+                <h2 id="poster-title">
+                    Affiche 1
+                </h2>
 
+                <p id="poster-description">
+                    Présentation du projet et contexte de réalisation.
+                </p>
 
-            <div class="project-text">
-
-                <div>
-                    <h2>À propos du projet</h2>
-
-                    <p>
-                        Décris ici le contexte du projet, la demande
-                        initiale et les objectifs graphiques.
-                    </p>
-                </div>
-
-
-                <div>
-                    <h2>Approche graphique</h2>
-
-                    <p>
-                        Explique ici tes choix graphiques, tes recherches,
-                        tes inspirations et la direction artistique.
-                    </p>
-                </div>
-            
-                <div>
-
-                <h2>Outils</h2>
-
-                <div class="project-tools">
-
-                    <span>Photoshop</span>
-                    <span>Illustrator</span>
-                    <span>InDesign</span>
-
-                </div>
-
-                </div>
             </div>
 
         </section>
@@ -156,10 +184,211 @@
 
     <footer>
 
-        <p>© 2026 — Silvino Tony — Senro Studio</p>
+        <p>
+            © 2026 — Silvino Tony — Senro Studio
+        </p>
 
     </footer>
 
 </body>
+
+/* Lightbox */
+
+<div class="lightbox" id="lightbox">
+
+    <button class="lightbox-close" aria-label="Fermer">
+        ×
+    </button>
+
+    <button class="lightbox-arrow lightbox-arrow-left" aria-label="Image précédente">
+        ←
+    </button>
+
+    <img class="lightbox-content" id="lightbox-image" alt="">
+
+    <button class="lightbox-arrow lightbox-arrow-right" aria-label="Image suivante">
+        →
+    </button>
+
+    <div class="lightbox-counter" id="lightbox-counter">
+        1 / 4
+    </div>
+
+</div>
+
+<script>
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImage = document.getElementById("lightbox-image");
+    const lightboxCounter = document.getElementById("lightbox-counter");
+    const images = document.querySelectorAll(".lightbox-image");
+    const closeButton = document.querySelector(".lightbox-close");
+    const lightboxPreviousButton = document.querySelector(".lightbox-arrow-left");
+    const lightboxNextButton = document.querySelector(".lightbox-arrow-right");
+
+    let currentImage = 0;
+
+    function showImage(index) {
+        currentImage = (index + images.length) % images.length;
+
+        lightboxImage.src = images[currentImage].src;
+        lightboxImage.alt = images[currentImage].alt;
+
+        lightboxCounter.textContent =
+            `${currentImage + 1} / ${images.length}`;
+    }
+
+    images.forEach((image, index) => {
+        image.addEventListener("click", () => {
+            showImage(index);
+
+            lightbox.classList.add("active");
+            document.body.style.overflow = "hidden";
+        });
+    });
+
+    function closeLightbox() {
+        lightbox.classList.remove("active");
+        document.body.style.overflow = "";
+    }
+
+    lightboxPreviousButton.addEventListener("click", () => {
+    showImage(currentImage - 1);
+    });
+
+    lightboxNextButton.addEventListener("click", () => {
+    showImage(currentImage + 1);
+    });
+
+    closeButton.addEventListener("click", closeLightbox);
+
+    lightbox.addEventListener("click", (event) => {
+        if (event.target === lightbox) {
+            closeLightbox();
+        }
+    });
+
+    document.addEventListener("keydown", (event) => {
+        if (!lightbox.classList.contains("active")) {
+            return;
+        }
+
+        if (event.key === "ArrowLeft") {
+            showImage(currentImage - 1);
+        }
+
+        if (event.key === "ArrowRight") {
+            showImage(currentImage + 1);
+        }
+
+        if (event.key === "Escape") {
+            closeLightbox();
+        }
+    });
+</script>
+
+/* Caroussel dynamique */
+
+<script>
+    const posters = document.querySelectorAll(".poster");
+    const previousButton = document.querySelector(".poster-arrow-left");
+    const nextButton = document.querySelector(".poster-arrow-right");
+
+    let currentPoster = 0;
+
+    const posterData = [
+    {
+        category: "Projet personnel",
+        title: "Waves",
+        description: "Projet personnel d'affiche réalisé dans le but d'expérimenter différentes techniques et possibilités de création sur Photoshop."
+    },
+    {
+        category: "Projet personnel",
+        title: "Senro Design",
+        description: "Déclinaison graphique de mon logo d'artiste, cette affiche explore mon identité visuelle à travers une composition plus expérimentale et un travail autour de la typographie et des effets graphiques."
+    },
+    {
+        category: "Projet scolaire + personnel",
+        title: "Graine de mots",
+        description: "Initialement réalisée dans le cadre d'un projet scolaire autour d'un brief fictif pour le festival « Graine de mots », cette affiche m'a particulièrement plu et m'a poussé à reprendre le projet afin d'affiner et d'améliorer le visuel."
+    },
+    {
+        category: "Projet scolaire + personnel",
+        title: "Graine de mots — Version sombre",
+        description: "Déclinaison sombre de l'affiche « Graine de mots ». Cette seconde version reprend le concept et la composition du projet original tout en développant une atmosphère plus sombre et une nouvelle approche visuelle."
+    },
+    {
+    category: "Projet scolaire",
+    title: "La Poissonnerie",
+    description: "Cette affiche a été produite dans le cadre d'un rendu scolaire. L'objectif en suivant le brief était de produire une affiche avec les éléments mis à disposition tout en travaillant les aspects de chaques éléments et l'effet de transparence du glaçon avec les éclaboussures."
+    },
+    {
+    category: "Projet scolaire",
+    title: "Portes Ouverte établissement",
+    description: "Cette affiche a été produite dans le cadre d'un rendu scolaire. L'objectif était de produire une affiche pour les portes ouvertes de mon établissement."
+    },
+    {
+    category: "Projet Scolaire",
+    title: "Collab South Park x Nike",
+    description: "Produite dans le cadre scolaire, cette affiche fictive de communication commerciale devait faire la promotion d'une collaboration entre les marques South Park et Nike."
+    },
+    {
+    category: "Projet Scolaire",
+    title: "Beauregard 2021",
+    description: "Cette affiche fictive a été produite dans le cadre scolaire. L'objectif était simplement de faire une affiche pour le festival de Beauregard."
+    },
+    {
+    category: "Projet Scolaire & Personnel",
+    title: "Palma Festival Poster",
+    description: "Dans un cadre Scolaire, l'objectif était de créer une affiche pour le festival Palma. Le but premier était de travailler la mise en page, j'y ai également intégré un logo que j'ai pu réaliser moi même dans un univers graphique qui m'est propre."
+    },
+    ];
+
+    function updatePosters() {
+        posters.forEach((poster, index) => {
+            const position = (index - currentPoster + posters.length) % posters.length;
+
+            poster.classList.remove(
+                "poster-left",
+                "poster-center",
+                "poster-right",
+                "poster-hidden"
+            );
+
+            if (position === 0) {
+                poster.classList.add("poster-center");
+            } else if (position === 1) {
+                poster.classList.add("poster-right");
+            } else if (position === posters.length - 1) {
+                poster.classList.add("poster-left");
+            } else {
+                poster.classList.add("poster-hidden");
+            }
+        });
+        
+        const posterCategory = document.getElementById("poster-category");
+        const posterTitle = document.getElementById("poster-title");
+        const posterDescription = document.getElementById("poster-description");
+
+        posterCategory.textContent = posterData[currentPoster].category;
+        posterTitle.textContent = posterData[currentPoster].title;
+        posterDescription.textContent = posterData[currentPoster].description;
+    }
+
+    previousButton.addEventListener("click", () => {
+        currentPoster =
+            (currentPoster - 1 + posters.length) % posters.length;
+
+        updatePosters();
+    });
+
+    nextButton.addEventListener("click", () => {
+        currentPoster =
+            (currentPoster + 1) % posters.length;
+
+        updatePosters();
+    });
+
+    updatePosters();
+</script>
 
 </html>
