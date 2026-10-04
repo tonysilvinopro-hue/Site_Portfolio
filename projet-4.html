@@ -76,6 +76,7 @@
         <img
             src="images/projet-4/Projet_4_4.png"
             alt="Mockup du catalogue Legallais"
+            class="lightbox-image"
         >
     </div>
 
@@ -182,5 +183,41 @@
     </footer>
 
 </body>
+
+<div class="project-lightbox" id="projectLightbox">
+    <button class="project-lightbox-close" id="projectLightboxClose" aria-label="Fermer">×</button>
+    <img src="" alt="" class="project-lightbox-image" id="projectLightboxImage">
+</div>
+
+<script>
+    const lightboxImages = document.querySelectorAll(".lightbox-image");
+    const projectLightbox = document.getElementById("projectLightbox");
+    const projectLightboxImage = document.getElementById("projectLightboxImage");
+    const projectLightboxClose = document.getElementById("projectLightboxClose");
+
+    lightboxImages.forEach((image) => {
+        image.addEventListener("click", () => {
+            projectLightboxImage.src = image.src;
+            projectLightboxImage.alt = image.alt;
+            projectLightbox.classList.add("active");
+        });
+    });
+
+    projectLightboxClose.addEventListener("click", () => {
+        projectLightbox.classList.remove("active");
+    });
+
+    projectLightbox.addEventListener("click", (event) => {
+        if (event.target === projectLightbox) {
+            projectLightbox.classList.remove("active");
+        }
+    });
+
+    document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape") {
+            projectLightbox.classList.remove("active");
+        }
+    });
+</script>
 
 </html>
