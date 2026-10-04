@@ -560,6 +560,38 @@ body::before {
 
     margin-bottom: 50px;
     }
+
+    .document-grid {
+    grid-template-columns: 1fr;
+    }
+
+    .document-preview {
+    height: 450px;
+    }
+
+    .document-info {
+    padding: 20px;
+    }
+
+    .document-grid {
+    grid-template-columns: 1fr;
+    }
+
+    .document-preview {
+    height: 450px;
+    }
+
+    .document-info {
+    padding: 20px;
+    }
+
+    .project-brandbook {
+    padding: 25px;
+    }
+
+    .brandbook-info h2 {
+    font-size: 1.7rem;
+    }
 }
 
 /* =========================
@@ -1183,4 +1215,137 @@ body::before {
     font-weight: 500;
     letter-spacing: 0.08em;
     transform: translateX(-50%);
+}
+
+/* =========================
+   DOCUMENTS PROJET
+   ========================= */
+
+.project-documents {
+    margin-top: 90px;
+}
+
+.project-documents > h2 {
+    margin-bottom: 35px;
+    font-size: clamp(2rem, 4vw, 3rem);
+    line-height: 1;
+}
+
+.document-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    align-items: start;
+}
+
+.document-card {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    background-color: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    overflow: hidden;
+    color: inherit;
+    text-decoration: none;
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.document-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.06);
+    border-color: var(--accent);
+}
+
+.document-preview {
+    width: 100%;
+    overflow: hidden;
+    background-color: #f7f5f8;
+    border-bottom: 1px solid var(--border);
+}
+
+.document-preview img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.document-info {
+    padding: 25px 30px 30px;
+}
+
+.document-info .project-category {
+    margin-bottom: 10px;
+}
+
+.document-info h3 {
+    margin-bottom: 12px;
+    font-size: 1.5rem;
+    line-height: 1.2;
+}
+
+.document-info p:last-child {
+    color: var(--text-light);
+    font-size: 0.9rem;
+    line-height: 1.7;
+}
+
+.project-brandbook {
+    margin-top: 50px;
+    padding: 35px;
+    background-color: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+}
+
+.brandbook-info {
+    max-width: 700px;
+}
+
+.brandbook-info h2 {
+    margin-bottom: 15px;
+    font-size: 2rem;
+}
+
+.brandbook-info p:not(.project-category) {
+    margin-bottom: 25px;
+    color: var(--text-light);
+    line-height: 1.7;
+}
+
+.project-featured-image {
+    width: 100%;
+    margin-bottom: 90px;
+    padding: 40px;
+    background-color: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.project-featured-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.document-card {
+    align-self: start;
+}
+
+.project-4-double-page {
+    grid-column: 1 / -1;
+}
+
+.project-5-cover {
+    grid-column: 1 / -1;
+    width: 60%;
+    justify-self: center;
+}
+
+.project-5-double-page {
+    grid-column: 1 / -1;
 }
