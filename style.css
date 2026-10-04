@@ -578,7 +578,7 @@ body::before {
     }
 
     .document-preview {
-    height: 450px;
+    height: auto;
     }
 
     .document-info {
@@ -591,6 +591,35 @@ body::before {
 
     .brandbook-info h2 {
     font-size: 1.7rem;
+    }
+
+    /* =========================
+   PROJET 2 — MOBILE
+   ========================= */
+
+    @media (max-width: 768px) {
+
+    /* Les 3 mockups passent sur une seule colonne */
+    .colhybrid-gallery {
+        grid-template-columns: 1fr;
+    }
+
+    /* À propos du projet + Le concept */
+    .project-text {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    /* Charte graphique */
+    .project-pdf {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .project-pdf .cv-download {
+        margin-top: 0;
+    }
     }
 }
 
@@ -924,7 +953,7 @@ body::before {
 
 .project-gallery-item img {
     width: 100%;
-    height: 250px;
+    height: auto;
 
     object-fit: contain;
     display: block;
@@ -1348,4 +1377,39 @@ body::before {
 
 .project-5-double-page {
     grid-column: 1 / -1;
+}
+
+
+
+/* Correction hauteur des mockups */
+.colhybrid-gallery {
+    align-items: start;
+}
+
+.colhybrid-gallery .project-gallery-item {
+    align-self: start;
+}
+
+/* Centrer le 3e mockup */
+.colhybrid-gallery .project-gallery-item:nth-child(3) {
+    justify-self: center;
+}
+
+/* PROJET 2 — À PROPOS + CONCEPT MOBILE */
+
+@media (max-width: 768px) {
+    .project-text {
+        display: grid;
+        grid-template-columns: 1fr !important;
+        gap: 40px;
+        margin-bottom: 40px;
+    }
+}
+
+/* PROJET 3 — SUPPORTS DE COMMUNICATION MOBILE */
+
+@media (max-width: 768px) {
+    .document-grid {
+        grid-template-columns: 1fr;
+    }
 }
