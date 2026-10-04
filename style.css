@@ -1417,3 +1417,9 @@ body::before {
 .cv-intro p + p {
     margin-top: 20px;
 }
+
+@media (max-width: 768px) {
+    .cv-intro p + p {
+        margin-top: 20px;
+    }
+}
