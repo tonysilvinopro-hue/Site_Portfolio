@@ -1413,3 +1413,7 @@ body::before {
         grid-template-columns: 1fr;
     }
 }
+
+.cv-intro p + p {
+    margin-top: 20px;
+}
