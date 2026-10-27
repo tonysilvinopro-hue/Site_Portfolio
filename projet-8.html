@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flyer serrurerie — Silvino Tony</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <a href="index.html" class="logo">Silvino Tony</a>
+
+            <div class="nav-links">
+                <a href="index.html">Portfolio</a>
+                <a href="cv.html">CV</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+
+        <section class="project-header">
+
+            <a href="index.html" class="back-link">← Retour au portfolio</a>
+
+            <p class="project-category">Projet scolaire</p>
+
+            <h1>Flyer serrurerie</h1>
+
+            <p class="project-introduction">
+                Création d'une identité visuelle sous forme de flyer
+                pour une entreprise de serrurerie. Projet fictif réalisé
+                dans un cadre scolaire.
+            </p>
+
+            <div class="project-meta">
+
+                <div>
+                    <span>Type</span>
+                    <strong>Identité visuelle & mise en page</strong>
+                </div>
+
+                <div>
+                    <span>Contexte</span>
+                    <strong>Projet scolaire fictif</strong>
+                </div>
+
+                <div>
+                    <span>Logiciels</span>
+                    <strong>InDesign · Photoshop · Illustrator</strong>
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="project-content">
+
+            <!-- Mockup en grand -->
+            <div class="project-featured-image">
+                <img
+                    src="images/projet-8/Projet_8_1.png"
+                    alt="Mockup du flyer de la serrurerie"
+                    class="lightbox-image"
+                >
+            </div>
+
+            <!-- Recto / verso côte à côte -->
+            <div class="flyer-pair">
+
+                <div class="project-gallery-item">
+                    <img
+                        src="images/projet-8/Projet_8_2.png"
+                        alt="Flyer serrurerie — recto"
+                        class="lightbox-image"
+                    >
+                </div>
+
+                <div class="project-gallery-item">
+                    <img
+                        src="images/projet-8/Projet_8_3.png"
+                        alt="Flyer serrurerie — verso"
+                        class="lightbox-image"
+                    >
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© 2026 — Silvino Tony — Senro Studio</p>
+    </footer>
+
+    <div class="project-lightbox" id="projectLightbox">
+        <button class="project-lightbox-close" id="projectLightboxClose" aria-label="Fermer">×</button>
+        <img src="" alt="" class="project-lightbox-image" id="projectLightboxImage">
+    </div>
+
+    <script src="lightbox.js"></script>
+
+</body>
+</html>

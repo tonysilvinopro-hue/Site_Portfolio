@@ -213,33 +213,46 @@
         </div>
 
 
-        <div class="project-pdf">
+        <div class="project-documents">
 
-            <div>
+    <h2>Charte graphique</h2>
 
-                <p class="project-category">
-                    Documentation
-                </p>
+    <p class="portfolio-intro">
+        Découvrez la charte graphique complète du projet,
+        regroupant les différents éléments de l'identité
+        visuelle développée pour Colhybrid.
+    </p>
 
-                <h2>Charte graphique</h2>
+    <div
+        class="pdf-viewer"
+        data-total="22"
+        data-path="images/projet-2/charte/page-"
+        data-label="Charte graphique Colhybrid"
+    >
+        <div class="pdf-viewer-stage">
+            <button class="pdf-viewer-arrow" data-dir="prev" aria-label="Page précédente">←</button>
+            <img class="pdf-viewer-page lightbox-image" alt="">
+            <button class="pdf-viewer-arrow" data-dir="next" aria-label="Page suivante">→</button>
+        </div>
+        <p class="pdf-viewer-counter"></p>
+    </div>
 
-                <p>
-                    Découvrez la charte graphique complète du projet,
-                    regroupant les différents éléments de l'identité
-                    visuelle développée pour Colhybrid.
-                </p>
-
-            </div>
-
+    <div class="project-brandbook">
+        <div class="brandbook-info">
+            <p class="project-category">Documentation</p>
+            <h2>Charte graphique Colhybrid</h2>
+            <p>Retrouvez la charte graphique complète en PDF.</p>
             <a
                 href="images/projet-2/charte-colhybrid.pdf"
                 class="cv-download"
-                target="_blank"
+                download
             >
-                Voir la charte graphique
+                Télécharger la charte graphique
             </a>
-
         </div>
+    </div>
+
+</div>
 
     </section>
 
@@ -252,52 +265,15 @@
 
     </footer>
 
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" aria-label="Fermer">×</button>
+        <img class="lightbox-content" id="lightbox-image" alt="">
+    </div>
+
+    <script src="pdf-viewer.js"></script>
+    <script src="lightbox.js"></script>
+
+    
+
 </body>
-
-<div class="lightbox" id="lightbox">
-
-    <button class="lightbox-close" aria-label="Fermer">
-        ×
-    </button>
-
-    <img class="lightbox-content" id="lightbox-image" alt="">
-
-</div>
-
-<script>
-    const lightbox = document.getElementById("lightbox");
-    const lightboxImage = document.getElementById("lightbox-image");
-    const images = document.querySelectorAll(".lightbox-image");
-    const closeButton = document.querySelector(".lightbox-close");
-
-    images.forEach((image) => {
-        image.addEventListener("click", () => {
-            lightboxImage.src = image.src;
-            lightboxImage.alt = image.alt;
-
-            lightbox.classList.add("active");
-            document.body.style.overflow = "hidden";
-        });
-    });
-
-    function closeLightbox() {
-        lightbox.classList.remove("active");
-        document.body.style.overflow = "";
-    }
-
-    closeButton.addEventListener("click", closeLightbox);
-
-    lightbox.addEventListener("click", (event) => {
-        if (event.target === lightbox) {
-            closeLightbox();
-        }
-    });
-
-    document.addEventListener("keydown", (event) => {
-        if (event.key === "Escape") {
-            closeLightbox();
-        }
-    });
-</script>
-
 </html>

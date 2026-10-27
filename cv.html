@@ -7,7 +7,7 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>CV — Ton Nom</title>
+    <title>CV — Silvino Tony</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -73,7 +73,7 @@
 
                 <img
                     src="images/CV.png"
-                    alt="Curriculum vitae de Ton Nom"
+                    alt="Curriculum vitae de Silvino Tony"
                     class="cv-lightbox-trigger"
                 >
 
@@ -91,49 +91,45 @@
 
 
     <footer>
-    <p>© 2026 — Silvino Tony — Senro Studio </p>
+        <p>© 2026 — Silvino Tony — Senro Studio</p>
     </footer>
 
+    <div class="cv-lightbox" id="cvLightbox">
+        <button class="cv-lightbox-close" id="cvLightboxClose" aria-label="Fermer">×</button>
+        <img
+            src="images/CV.png"
+            alt="Curriculum vitae de Silvino Tony"
+            class="cv-lightbox-image"
+        >
+    </div>
+
+    <script>
+        const cvTrigger = document.querySelector(".cv-lightbox-trigger");
+        const cvLightbox = document.getElementById("cvLightbox");
+        const cvLightboxClose = document.getElementById("cvLightboxClose");
+
+        if (cvTrigger && cvLightbox) {
+            cvTrigger.addEventListener("click", () => {
+                cvLightbox.classList.add("active");
+            });
+
+            cvLightboxClose.addEventListener("click", () => {
+                cvLightbox.classList.remove("active");
+            });
+
+            cvLightbox.addEventListener("click", (event) => {
+                if (event.target === cvLightbox) {
+                    cvLightbox.classList.remove("active");
+                }
+            });
+
+            document.addEventListener("keydown", (event) => {
+                if (event.key === "Escape") {
+                    cvLightbox.classList.remove("active");
+                }
+            });
+        }
+    </script>
+
 </body>
-
-<div class="cv-lightbox" id="cvLightbox">
-
-    <button class="cv-lightbox-close" id="cvLightboxClose" aria-label="Fermer">
-        ×
-    </button>
-
-    <img
-        src="images/CV.png"
-        alt="Curriculum vitae de Ton Nom"
-        class="cv-lightbox-image"
-    >
-
-</div>
-
-<script>
-    const cvTrigger = document.querySelector(".cv-lightbox-trigger");
-    const cvLightbox = document.getElementById("cvLightbox");
-    const cvLightboxClose = document.getElementById("cvLightboxClose");
-
-    cvTrigger.addEventListener("click", () => {
-        cvLightbox.classList.add("active");
-    });
-
-    cvLightboxClose.addEventListener("click", () => {
-        cvLightbox.classList.remove("active");
-    });
-
-    cvLightbox.addEventListener("click", (event) => {
-        if (event.target === cvLightbox) {
-            cvLightbox.classList.remove("active");
-        }
-    });
-
-    document.addEventListener("keydown", (event) => {
-        if (event.key === "Escape") {
-            cvLightbox.classList.remove("active");
-        }
-    });
-</script>
-
 </html>

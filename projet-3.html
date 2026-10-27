@@ -299,35 +299,46 @@
 
             </div>
 
-                            <div class="project-brandbook">
+    <div class="project-documents">
 
-                    <div class="brandbook-info">
+    <h2>Dossier de présentation — Charte graphique</h2>
 
-                        <p class="project-category">
-                            Identité graphique
-                        </p>
+    <p class="portfolio-intro">
+        Retrouvez l'ensemble de l'identité graphique développée
+        pour le projet Échappées Belles à travers le dossier
+        de présentation.
+    </p>
 
-                        <h2>
-                            Dossier de présentation - Charte graphique
-                        </h2>
+    <div
+        class="pdf-viewer"
+        data-total="15"
+        data-path="images/projet-3/dossier/page-"
+        data-label="Dossier de présentation Échappées Belles"
+    >
+        <div class="pdf-viewer-stage">
+            <button class="pdf-viewer-arrow" data-dir="prev" aria-label="Page précédente">←</button>
+            <img class="pdf-viewer-page lightbox-image" alt="">
+            <button class="pdf-viewer-arrow" data-dir="next" aria-label="Page suivante">→</button>
+        </div>
+        <p class="pdf-viewer-counter"></p>
+    </div>
 
-                        <p>
-                            Retrouvez l'ensemble de l'identité graphique développée
-                            pour le projet Échappées Belles à travers le dossier
-                            de présentation.
-                        </p>
+    <div class="project-brandbook">
+        <div class="brandbook-info">
+            <p class="project-category">Identité graphique</p>
+            <h2>Dossier de présentation</h2>
+            <p>Téléchargez le dossier complet au format PDF.</p>
+            <a
+                href="images/projet-3/Projet_3_4.pdf"
+                class="cv-download"
+                download
+            >
+                Télécharger le dossier PDF
+            </a>
+        </div>
+    </div>
 
-                        <a
-                            href="images/projet-3/Projet_3_4.pdf"
-                            class="cv-download"
-                            download
-                        >
-                            Télécharger le dossier PDF
-                        </a>
-
-                    </div>
-
-            </div>
+</div>
 
         </section>
 
@@ -343,42 +354,13 @@
     </footer>
 
 
+    <div class="project-lightbox" id="projectLightbox">
+        <button class="project-lightbox-close" id="projectLightboxClose" aria-label="Fermer">×</button>
+        <img src="" alt="" class="project-lightbox-image" id="projectLightboxImage">
+    </div>
+
+    <script src="pdf-viewer.js"></script>
+    <script src="lightbox.js"></script>
+
 </body>
-
-<div class="project-lightbox" id="projectLightbox">
-    <button class="project-lightbox-close" id="projectLightboxClose" aria-label="Fermer">×</button>
-    <img src="" alt="" class="project-lightbox-image" id="projectLightboxImage">
-</div>
-
-<script>
-    const lightboxImages = document.querySelectorAll(".lightbox-image");
-    const projectLightbox = document.getElementById("projectLightbox");
-    const projectLightboxImage = document.getElementById("projectLightboxImage");
-    const projectLightboxClose = document.getElementById("projectLightboxClose");
-
-    lightboxImages.forEach((image) => {
-        image.addEventListener("click", () => {
-            projectLightboxImage.src = image.src;
-            projectLightboxImage.alt = image.alt;
-            projectLightbox.classList.add("active");
-        });
-    });
-
-    projectLightboxClose.addEventListener("click", () => {
-        projectLightbox.classList.remove("active");
-    });
-
-    projectLightbox.addEventListener("click", (event) => {
-        if (event.target === projectLightbox) {
-            projectLightbox.classList.remove("active");
-        }
-    });
-
-    document.addEventListener("keydown", (event) => {
-        if (event.key === "Escape") {
-            projectLightbox.classList.remove("active");
-        }
-    });
-</script>
-
 </html>
